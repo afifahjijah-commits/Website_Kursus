@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <!-- Pengaturan agar tampilan responsif di layar HP maupun laptop -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduSkill Academy - Lembaga Kursus & Pelatihan</title>
+    <!-- Menghubungkan file HTML dengan file CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- 1. BAGIAN NAVBAR (Menu Navigasi Atas) -->
+    <header class="navbar">
+        <div class="logo-area">
+            <img src="img/logo.png" alt="Logo Kursus" class="logo-img">
+            <span class="logo-text">EduSkill Academy</span>
+        </div>
+
+        <!-- Tombol Hamburger (hanya muncul di layar HP) -->
+        <button id="hamburger" class="hamburger-btn" aria-label="Buka Menu">&#9776;</button>
+
+        <!-- Daftar Link Navigasi -->
+        <nav id="menu" class="nav-links">
+            <a href="#beranda">Beranda</a>
+            <a href="#tentang">Tentang</a>
+            <a href="#program">Program & Harga</a>
+            <a href="#jadwal">Jadwal</a>
+            <a href="#galeri">Galeri</a>
+            <a href="#faq">FAQ</a>
+            <a href="#daftar">Daftar</a>
+            <!-- Tombol Ganti Tema (Dark/Light Mode) -->
+            <button id="theme" class="theme-btn">Mode Gelap</button>
+        </nav>
+    </header>
+
+    <!-- 2. BAGIAN HERO (Banner Utama) -->
+    <section id="beranda" class="hero">
+        <div class="hero-content">
+            <!-- Fitur Tambahan: Jam Digital & Sapaan Waktu -->
+            <p id="sapaan-waktu" class="badge-waktu">Selamat Datang!</p>
+            <h1>Tingkatkan Keahlian Digitalmu Bersama Kami</h1>
+            <p>Belajar dari nol dengan mentor praktisi, kurikulum terstruktur, dan jadwal fleksibel untuk pelajar maupun umum.</p>
+            <a href="#daftar" class="btn-utama">Daftar Sekarang</a>
+        </div>
+        <div class="hero-image">
+            <img src="img/suasana.jpg" alt="Suasana Belajar Kursus">
+        </div>
+    </section>
+
+    <!-- 3. BAGIAN PROFIL / TENTANG KAMI -->
+    <section id="tentang" class="section container">
+        <h2 class="section-title">Tentang Lembaga Kami</h2>
+        <div class="profil-box">
+            <div class="profil-item">
+                <h3>Sejarah Singkat</h3>
+                <p>EduSkill Academy berdiri sejak tahun 2020 untuk membantu pelajar SMK dan masyarakat umum menguasai keterampilan teknologi siap kerja melalui metode praktik langsung.</p>
+            </div>
+            <div class="profil-item">
+                <h3>Visi & Misi</h3>
+                <p><strong>Visi:</strong> Menjadi pusat pelatihan vokasi terpercaya dan terjangkau.<br>
+                <strong>Misi:</strong> Menyediakan materi up-to-date, bimbingan intensif, dan sertifikat kelulusan resmi.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. BAGIAN DAFTAR PROGRAM & HARGA (Dilengkapi Fitur Pencarian) -->
+    <section id="program" class="section bg-alt">
+        <div class="container">
+            <h2 class="section-title">Daftar Program & Biaya Kursus</h2>
+            
+            <!-- Kotak Input Pencarian Program -->
+            <div class="search-box">
+                <input type="text" id="cari" placeholder="Ketik nama program (misal: Web, Desain, Jaringan)..." onkeyup="cariProgram()">
+            </div>
+
+            <!-- Grid Kartu Program Kursus -->
+            <div class="grid-program">
+                <!-- Kartu 1 -->
+                <div class="card program-item">
+                    <img src="img/web.jpg" alt="Kursus Pemrograman Web">
+                    <div class="card-body">
+                        <span class="tag">Pemula - Menengah</span>
+                        <h3>Pemrograman Web Dasar</h3>
+                        <p>Belajar membuat website responsif menggunakan HTML, CSS, dan JavaScript murni dari nol.</p>
+                        <p class="durasi">Durasi: 12 Pertemuan</p>
+                        <p class="harga">Rp 350.000</p>
+                    </div>
+                </div>
+
+                <!-- Kartu 2 -->
+                <div class="card program-item">
+                    <img src="img/desain.jpg" alt="Kursus Desain Grafis">
+                    <div class="card-body">
+                        <span class="tag">Semua Tingkat</span>
+                        <h3>Desain Grafis & UI/UX</h3>
+                        <p>Menguasai pembuatan poster, kemasan produk, dan rancangan antarmuka aplikasi modern.</p>
+                        <p class="durasi">Durasi: 10 Pertemuan</p>
+                        <p class="harga">Rp 300.000</p>
+                    </div>
+                </div>
+
+                <!-- Kartu 3 -->
+                <div class="card program-item">
+                    <img src="img/jaringan.jpg" alt="Kursus Administrasi Jaringan">
+                    <div class="card-body">
+                        <span class="tag">Menengah</span>
+                        <h3>Administrasi Server & Jaringan</h3>
+                        <p>Konfigurasi dasar Linux Debian, manajemen IP, dan pengaturan router MikroTik.</p>
+                        <p class="durasi">Durasi: 14 Pertemuan</p>
+                        <p class="harga">Rp 450.000</p>
+                    </div>
+                </div>
+
+                <!-- Kartu 4 -->
+                <div class="card program-item">
+                    <img src="img/perkantoran.jpg" alt="Kursus Perkantoran">
+                    <div class="card-body">
+                        <span class="tag">Pemula</span>
+                        <h3>Aplikasi Perkantoran & Data</h3>
+                        <p>Pengolahan dokumen laporan, rumus spreadsheet lanjutan, dan presentasi profesional.</p>
+                        <p class="durasi">Durasi: 8 Pertemuan</p>
+                        <p class="harga">Rp 250.000</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. BAGIAN JADWAL KURSUS -->
+    <section id="jadwal" class="section container">
+        <h2 class="section-title">Jadwal Kelas Tersedia</h2>
+        <div class="table-wrapper">
+            <table class="jadwal-table">
+                <thead>
+                    <tr>
+                        <th>Program Kursus</th>
+                        <th>Hari</th>
+                        <th>Waktu (WIB)</th>
+                        <th>Metode</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Pemrograman Web Dasar</td>
+                        <td>Senin & Rabu</td>
+                        <td>15.30 - 17.30</td>
+                        <td>Tatap Muka / Lab</td>
+                    </tr>
+                    <tr>
+                        <td>Desain Grafis & UI/UX</td>
+                        <td>Selasa & Kamis</td>
+                        <td>15.30 - 17.30</td>
+                        <td>Tatap Muka / Lab</td>
+                    </tr>
+                    <tr>
+                        <td>Administrasi Server & Jaringan</td>
+                        <td>Jumat & Sabtu</td>
+                        <td>13.30 - 15.30</td>
+                        <td>Praktik Lab</td>
+                    </tr>
+                    <tr>
+                        <td>Aplikasi Perkantoran & Data</td>
+                        <td>Sabtu</td>
+                        <td>09.00 - 12.00</td>
+                        <td>Tatap Muka</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- 6. BAGIAN GALERI KEGIATAN (Klik Foto untuk Popup) -->
+    <section id="galeri" class="section bg-alt">
+        <div class="container">
+            <h2 class="section-title">Galeri Kegiatan Belajar</h2>
+            <p class="section-subtitle">Klik pada foto untuk memperbesar tampilan</p>
+            <div class="grid-galeri">
+                <img src="img/galeri1.jpg" alt="Praktik Pemrograman Web" class="foto-galeri">
+                <img src="img/galeri2.jpg" alt="Diskusi Desain UI/UX" class="foto-galeri">
+                <img src="img/galeri3.jpg" alt="Praktik Konfigurasi Jaringan" class="foto-galeri">
+            </div>
+        </div>
+    </section>
+
+    <!-- Popup / Modal untuk Menampilkan Foto Besar (Tersembunyi secara default) -->
+    <div id="modal-galeri" class="modal">
+        <span id="tutup-modal" class="close-modal">&times;</span>
+        <img id="gambar-besar" class="modal-content" alt="Tampilan Besar">
+        <p id="caption-gambar" class="modal-caption"></p>
+    </div>
+
+    <!-- 7. BAGIAN FAQ (Pertanyaan Umum dengan Sistem Accordion) -->
+    <section id="faq" class="section container">
+        <h2 class="section-title">Pertanyaan yang Sering Diajukan (FAQ)</h2>
+        
+        <div class="faq-item">
+            <button class="faq-question">Apakah pemula tanpa dasar IT boleh mendaftar? <span>+</span></button>
+            <div class="faq-answer">
+                <p>Tentu boleh! Materi disusun bertahap mulai dari pengenalan paling dasar hingga studi kasus proyek nyata.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">Apakah peserta mendapatkan sertifikat? <span>+</span></button>
+            <div class="faq-answer">
+                <p>Ya, setiap peserta yang menyelesaikan minimal 80% pertemuan dan proyek akhir berhak mendapatkan sertifikat kelulusan resmi.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">Apakah harus membawa laptop sendiri? <span>+</span></button>
+            <div class="faq-answer">
+                <p>Peserta disarankan membawa laptop pribadi agar file latihan tersimpan rapi, namun kami juga menyediakan komputer di laboratorium.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. BAGIAN FORMULIR PENDAFTARAN (Dengan Validasi JavaScript) -->
+    <section id="daftar" class="section bg-alt">
+        <div class="container">
+            <h2 class="section-title">Formulir Pendaftaran Kursus</h2>
+            <form id="form-pendaftaran" class="form-box" onsubmit="validasiPendaftaran(event)">
+                <div class="form-group">
+                    <label for="nama">Nama Lengkap *</label>
+                    <input type="text" id="nama" placeholder="Masukkan nama lengkap Anda">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Alamat Email *</label>
+                    <input type="email" id="email" placeholder="contoh@email.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="telepon">Nomor WhatsApp *</label>
+                    <input type="text" id="telepon" placeholder="08xxxxxxxxxx">
+                </div>
+
+                <div class="form-group">
+                    <label for="pilihan-kursus">Pilih Program Kursus *</label>
+                    <select id="pilihan-kursus">
+                        <option value="">-- Pilih Program --</option>
+                        <option value="Pemrograman Web Dasar">Pemrograman Web Dasar (Rp 350.000)</option>
+                        <option value="Desain Grafis & UI/UX">Desain Grafis & UI/UX (Rp 300.000)</option>
+                        <option value="Administrasi Server & Jaringan">Administrasi Server & Jaringan (Rp 450.000)</option>
+                        <option value="Aplikasi Perkantoran & Data">Aplikasi Perkantoran & Data (Rp 250.000)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="pesan">Catatan Tambahan (Opsional)</label>
+                    <textarea id="pesan" rows="3" placeholder="Tuliskan pertanyaan atau jadwal yang diinginkan..."></textarea>
+                </div>
+
+                <button type="submit" class="btn-utama btn-full">Kirim Pendaftaran</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- 9. BAGIAN FOOTER -->
+    <footer class="footer">
+        <p><strong>EduSkill Academy</strong> &mdash; Jl. Pendidikan No. 12, Indonesia</p>
+        <p>Email: info@eduskill.id | Telp: (0272) 555-0199</p>
+        <p class="copyright">&copy; 2026 EduSkill Academy. Hak Cipta Dilindungi.</p>
+    </footer>
+
+    <!-- Tombol Kembali ke Atas -->
+    <button id="top" class="btn-top" title="Kembali ke atas">&uarr;</button>
+
+    <!-- Menghubungkan file JavaScript (Wajib diletakkan sebelum penutup body) -->
+    <script src="js/script.js"></script>
+</body>
+</html>
